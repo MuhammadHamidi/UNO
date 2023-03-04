@@ -1,0 +1,5 @@
+client/.idea
+server/.idea
+client/out
+server/out
+UIclient
