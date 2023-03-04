@@ -31,7 +31,7 @@ public class AuthenticationImpl extends Authentication {
                     String message = (String) receive.getObject();
                     System.out.println(message);
                     if(message.equals("welcome back to your account.")){
-                        this.username = username;
+                        this.username = ((HashMap<String,String>) packet.getObject()).get("username");
                         break;
                     }
                 } else if (str.equals("2")) {
@@ -41,7 +41,7 @@ public class AuthenticationImpl extends Authentication {
                     String message = (String) receive.getObject();
                     System.out.println(message);
                     if(message.equals("account successfully created.")){
-                        this.username = username;
+                        this.username = ((HashMap<String,String>) packet.getObject()).get("username");;
                         break;
                     }
                 } else {
